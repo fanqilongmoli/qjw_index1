@@ -1,0 +1,332 @@
+.header-search {
+    position: relative;
+    margin-right: 171px;
+    margin-top: 34px;
+}
+
+.header-search .wenzhang {
+    position: absolute;
+    width: 58px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    background: inherit;
+    background-color: rgba(33, 147, 114, 1);
+    border: none;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.header-search .zhuanlan {
+    position: absolute;
+    left: 58px;
+    width: 58px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #333333;
+}
+
+.header-input {
+    margin-top: 24px;
+    width: 300px;
+    height: 32px;
+    background: inherit;
+    background-color: rgba(33, 147, 114, 0);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(33, 147, 114, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.header-input input {
+    float: left;
+    width: 219px;
+    height: 26px;
+    background-color: #DDEBD4;
+    font-family: 'ArialMT', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+    text-align: left;
+    border-color: transparent;
+    outline-style: none;
+}
+
+.header-input span {
+    width: 77px;
+    height: 30px;
+    line-height: 30px;
+    background: inherit;
+    background-color: rgba(33, 147, 114, 1);
+    border: none;
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    float: right;
+}
+
+.nav {
+    position: relative;
+}
+
+.nav .nav-bg {
+    width: 1366px;
+    margin-top: 24px;
+    height: 36px;
+    background: rgba(2, 115, 85, 1);
+}
+
+.nav ul {
+    position: absolute;
+    top: -2px;
+    left: 171px;
+    width: 1024px;
+    background-color: rgba(32, 147, 113, 1);
+}
+
+.nav li {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    padding-left: 40px;
+    font-family: "Microsoft YaHei UI";
+    font-weight: bold;
+    font-size: 16px;
+
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.nav li.index1 {
+    padding-left: 25px;
+}
+
+.news {
+    margin-top: 20px;
+}
+
+.new-banner {
+    float: left;
+    width: 600px;
+    height: 347px;
+    background: red;
+}
+
+.new-tab {
+    float: right;
+    width: 424px;
+    height: 347px;
+    background: #FFFFFF;
+}
+
+.houqinyaowen-title {
+    margin-left: 66px;
+    color: #00543a;
+    font-size: 16px;
+}
+
+.new-tab span {
+    display: inline-block;
+    margin-left: 10px;
+    height: 34px;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+.houqinyaowen-select {
+    background: #00543a;
+    width: 80px;
+    height: 2px;
+}
+
+.junjiantoutiao-title {
+    margin-left: 132px;
+    font-size: 16px;
+    height: 34px;
+    line-height: 34px;
+    cursor: pointer;
+}
+
+.junjiantoutiao-select {
+    background: #FFFFFF;
+    width: 80px;
+    height: 2px;
+}
+
+.junjiantoutiao-content {
+    display: none;
+}
+
+.news2 {
+    padding-top: 20px;
+}
+
+.news2 li {
+    float: left;
+}
+
+.news2 li:nth-child(1), .news2 li:nth-child(2) {
+    margin-right: 20px;
+}
+
+.news3 {
+    padding-top: 20px;
+}
+
+/*=============================*/
+.gongzuozhuanti {
+    margin-left: 10px;
+    width: 318px;
+}
+
+.gongzuozhuanti ul {
+    margin-top: 10px;
+}
+
+.gongzuozhuanti li {
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #d2d2d2;
+}
+
+.gongzuozhuanti li span {
+    float: left;
+    display: inline-block;
+    height: 38px;
+    width: 3px;
+    background: #209470;
+}
+
+.gongzuozhuanti li img {
+    margin-left: 9px;
+    margin-right: 9px;
+}
+
+.gongzuozhuanti li:nth-child(2), .gongzuozhuanti li:nth-child(3) {
+    margin-top: -1px;
+}
+
+/*===================================*/
+.zhengcedayi {
+    width: 328px;
+    margin-left: 20px;
+}
+
+/*====================================*/
+.tongzhigonggao {
+    width: 318px;
+    margin-left: 20px;
+}
+
+/*=========================*/
+.new4 {
+    padding-top: 20px;
+}
+
+.transformation-div {
+    height: 100px;
+    background: #FFFFFF url("../image/u9.png") no-repeat bottom;
+    line-height: 100px;
+    text-align: center;
+}
+
+/*==========================*/
+.new5 {
+    padding-top: 20px;
+}
+
+.zhengcefagui {
+    width: 318px;
+    margin-left: 10px;
+}
+
+.dianxinganli {
+    width: 328px;
+    margin-left: 20px;
+}
+
+.yewuyanjiu {
+    width: 318px;
+    margin-left: 20px;
+}
+
+/*=========================*/
+.new6 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.new6 .page {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.new6 .content {
+    margin-top: 10px;
+    width: 1004px;
+    height: 260px;
+    background: #eeeeee;
+}
+
+/*=========================*/
+.common-ul {
+    margin-top: 18px;
+}
+
+.common-ul li {
+    height: 30px;
+}
+
+.common-ul img {
+    margin-right: 4px;
+}
+
+/*=========================*/
+.new-title {
+    color: #00543a;
+    font-size: 16px;
+
+}
+
+.new-title span {
+    display: inline-block;
+    margin-left: 10px;
+    height: 24px;
+}
+
+.new-title-select {
+    background: #00543a;
+    width: 100px;
+    height: 2px;
+}
+
+.new-title-line {
+    height: 1px;
+    background: #d2d2d2;
+}.new-title-line2 {
+    height: 1px;
+    background: #d2d2d2;
+     margin-left: 10px;
+     margin-right: 10px;
+}

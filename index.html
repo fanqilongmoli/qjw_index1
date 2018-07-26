@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>强军网</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/jquery.vm-carousel.css">
+    <script type="text/javascript" src="js/modernizr.js"></script>
+
+    <style type="text/css">
+        .vmc-centered {
+            padding: 30px 0;
+        }
+
+        .vmc-centered img {
+            transition: all 0.3s ease;
+        }
+
+        .vmc-centered .vmc_active img {
+            transform: scale(1.2);
+        }
+
+        .all {
+            width: 600px;
+            height: 347px;
+            position: relative;
+        }
+
+        .screen {
+            width: 600px;
+            height: 347px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .screen li {
+            width: 600px;
+            height: 347px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .screen ul {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 3000px;
+        }
+
+        .all ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .all ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #1c0805;
+            margin-left: 10px;
+            cursor: pointer;
+            color: #FFFFFF;
+        }
+
+        .all ol li.current {
+            background: #209470;
+        }
+
+        #arr {
+            display: none;
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<section class="w clearfix">
+    <img src="image/u2.png" class="fl">
+    <div class="fr header-search ">
+        <span class="wenzhang">文章</span>
+        <span class="zhuanlan">专栏</span>
+        <div class="header-input">
+            <input>
+            <span>搜索</span>
+        </div>
+    </div>
+</section>
+<!--导航-->
+<section class="w nav">
+    <div class="nav-bg"></div>
+    <ul>
+        <li class="index1">首页</li>
+        <li>新闻资讯</li>
+        <li>综合计划</li>
+        <li>工程建设</li>
+        <li>设施维护</li>
+        <li>土地环境</li>
+        <li>住房保障</li>
+        <li>监督评价</li>
+        <li>政策法规</li>
+        <li>党建政工</li>
+    </ul>
+</section>
+
+<section class="w2 news clearfix">
+    <div class="new-banner">
+        <div class="all" id='all'>
+            <div class="screen" id="screen">
+                <ul id="ul">
+                    <li><img src="image/u27.png" width="600" height="347"/></li>
+                    <li><img src="image/u37.png" width="600" height="347"/></li>
+                    <li><img src="image/u47.png" width="600" height="347"/></li>
+                </ul>
+                <ol>
+
+                </ol>
+                <div id="arr">
+                    <!--<span id="left"><</span>-->
+                    <!--<span id="right">></span>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="new-tab">
+        <div class="clearfix">
+            <div class="houqinyaowen-title fl" id="houqinyaowen-title">
+                <span>后勤要闻</span>
+                <div class="houqinyaowen-select"></div>
+            </div>
+            <div class="junjiantoutiao-title fl" id="junjiantoutiao-title">
+                <span>军建头条</span>
+                <div class="junjiantoutiao-select"></div>
+            </div>
+        </div>
+        <div class="new-title-line2"></div>
+        <div class="houqinyaowen-content">
+            <ul class="common-ul" style="margin-left: 20px; margin-top: 18px">
+                <li>
+                    <img src="image/u103.png"><a>拓展干部多渠道多岗位成才空间</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>靠改革激发创新活力</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+                </li>
+            </ul>
+        </div>
+        <div class="junjiantoutiao-content">
+            <ul class="common-ul" style="margin-left: 20px; margin-top: 18px">
+                <li>
+                    <img src="image/u103.png"><a>拓展干部多渠道123多岗位成才空间</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>靠改革激发123创新活力</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>坚决贯彻习主席重要123指示要求打好大连房地产...</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>全军装备作战实验和在123役考核试点成果交流会</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>坚决贯彻习主席重要指123示要求打好大连房地产...</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>全军装备作战实验和在役123考核试点成果交流会</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>坚决贯彻习主席重要指示123要求打好大连房地产...</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>全军装备作战实验和在役123考核试点成果交流会</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>坚决贯彻习主席重要指示123要求打好大连房地产...</a>
+                </li>
+                <li>
+                    <img src="image/u103.png"><a>全军装备作战实验和在役考123核试点成果交流会</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<!--几张图片-->
+<section class="w2 news2 clearfix">
+    <ul>
+        <li><img src="image/u229.png"></li>
+        <li><img src="image/u231.png"></li>
+        <li><img src="image/u227.png"></li>
+    </ul>
+</section>
+<!--工作专题 政策答疑 通知公告-->
+<section class="w2 news3 clearfix">
+    <div class="gongzuozhuanti fl">
+        <div class="new-title">
+            <span>工作专题</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <ul>
+            <li>
+                <span></span><img src="image/u744.png"><a>住房保障工作专题</a>
+            </li>
+            <li>
+                <span></span><img src="image/u744.png"><a>住房保障工作专题</a>
+            </li>
+            <li>
+                <span></span><img src="image/u744.png"><a>住房保障工作专题</a>
+            </li>
+        </ul>
+    </div>
+    <div class="zhengcedayi fl">
+        <div class="new-title">
+            <span>政策答疑</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <ul class="common-ul">
+            <li>
+                <img src="image/u103.png"><a>拓展干部多渠道多岗位成才空间</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>靠改革激发创新活力</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tongzhigonggao fl">
+        <div class="new-title">
+            <span>通知公告</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <ul class="common-ul">
+            <li>
+                <img src="image/u103.png"><a>拓展干部多渠道多岗位成才空间</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>靠改革激发创新活力</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="w2 new4">
+    <div class="transformation-div" id="transformation-div">
+        <img id="transformation-img" src="image/u20.png">
+    </div>
+</section>
+<!--政策法规 典型案例 业务研究-->
+<section class="w2 new5 clearfix">
+    <div class="zhengcefagui fl">
+        <div class="new-title">
+            <span>政策法规</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <ul class="common-ul">
+            <li>
+                <img src="image/u103.png"><a>拓展干部多渠道多岗位成才空间</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>靠改革激发创新活力</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+            </li>
+        </ul>
+    </div>
+    <div class="dianxinganli fl">
+        <div class="new-title">
+            <span>典型案例</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <ul class="common-ul">
+            <li>
+                <img src="image/u103.png"><a>拓展干部多渠道多岗位成才空间</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>靠改革激发创新活力</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+            </li>
+        </ul>
+    </div>
+    <div class="yewuyanjiu fl">
+        <div class="new-title">
+            <span>业务研究</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <ul class="common-ul">
+            <li>
+                <img src="image/u103.png"><a>拓展干部多渠道多岗位成才空间</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>靠改革激发创新活力</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<!--营房史话 “军建工程”系统 报纸期刊-->
+<section class="w2 new5 clearfix">
+    <div class="zhengcefagui fl">
+        <div class="new-title">
+            <span>营房史话</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <ul class="common-ul">
+            <li>
+                <img src="image/u103.png"><a>拓展干部多渠道多岗位成才空间</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>靠改革激发创新活力</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+            </li>
+        </ul>
+    </div>
+    <div class="dianxinganli fl">
+        <div class="new-title">
+            <span>“军建工程”系统</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <ul class="common-ul">
+            <li>
+                <img src="image/u103.png"><a>拓展干部多渠道多岗位成才空间</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>靠改革激发创新活力</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+            </li>
+        </ul>
+    </div>
+    <div class="yewuyanjiu fl">
+        <div class="new-title">
+            <span>报纸期刊</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <ul class="common-ul">
+            <li>
+                <img src="image/u103.png"><a>拓展干部多渠道多岗位成才空间</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>靠改革激发创新活力</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>坚决贯彻习主席重要指示要求打好大连房地产...</a>
+            </li>
+            <li>
+                <img src="image/u103.png"><a>全军装备作战实验和在役考核试点成果交流会</a>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="w2 new6">
+    <div class="page">
+        <div class="new-title">
+            <span>强军书吧</span>
+            <div class="new-title-select"></div>
+            <div class="new-title-line"></div>
+        </div>
+        <div class="content">
+            <ul class="vmcarousel-centered-infitine vmc-centered">
+                <li><a href="http://www.baidu.com"><img src="image/1_u534.png" alt="" width="150"></a></li>
+                <li><img src="image/2_u536.png" alt="" width="150"></li>
+                <li><img src="image/3_u538.png" alt="" width="150"></li>
+                <li><img src="image/5_u574.png" alt="" width="150"></li>
+                <li><img src="image/5_u542.png" alt="" width="150"></li>
+                <li><img src="image/6_u544.png" alt="" width="150"></li>
+                <li><img src="image/5_u574.png" alt="" width="150"></li>
+                <li><img src="image/5_u542.png" alt="" width="150"></li>
+                <li><img src="image/6_u544.png" alt="" width="150"></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--footer-->
+<section class="w footer">
+    <img src="image/u4.png">
+</section>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script src="js/jquery.vm-carousel.js"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        $('.vmcarousel-centered-infitine').vmcarousel({
+            centered: true,
+            start_item: 1,
+            autoplay: false,
+            infinite: true
+        });
+        let transformationImg = $('#transformation-img');
+        setInterval(function () {
+            if (transformationImg[0].src.indexOf('u22') > -1) {
+                transformationImg.attr('src', 'image/u20.png');
+            } else {
+                transformationImg.attr('src', 'image/u22.png');
+            }
+
+        }, 400);
+
+        let transformationDiv = $('#transformation-div');
+
+        setInterval(function () {
+            const temp = transformationDiv.css('background-image').split("(")[1].split(")")[0];
+            if (temp.indexOf('u9') > -1) {
+                transformationDiv.css('background', 'url(image/u13.png)')
+            }
+            if (temp.indexOf('u13') > -1) {
+                transformationDiv.css('background', 'url(image/u17.png)')
+            }
+            if (temp.indexOf('u17') > -1) {
+                transformationDiv.css('background', 'url(image/u9.png)')
+            }
+        }, 2000)
+
+        $('#houqinyaowen-title').on('click', function () {
+            $('#houqinyaowen-title').css('color', '#00543a');
+            $('#junjiantoutiao-title').css('color', '#333333');
+            $('.houqinyaowen-select').css('background-color', '#00543a');
+            $('.junjiantoutiao-select').css('background-color', '#FFFFFF');
+            $('.houqinyaowen-content').show();
+            $('.junjiantoutiao-content').hide();
+        });
+        $('#junjiantoutiao-title').on('click', function () {
+            $('#junjiantoutiao-title').css('color', '#00543a');
+            $('#houqinyaowen-title').css('color', '#333333');
+            $('.houqinyaowen-select').css('background-color', '#FFFFFF');
+            $('.junjiantoutiao-select').css('background-color', '#00543a');
+            $('.houqinyaowen-content').hide();
+            $('.junjiantoutiao-content').show();
+        });
+        //=============================//
+        var all = document.getElementById("all");
+        var screen = all.firstElementChild || all.firstChild;
+        var imgWidth = screen.offsetWidth;
+        var ul = screen.firstElementChild || screen.firstChild;
+        var ol = screen.children[1];
+        var div = screen.lastElementChild || screen.lastChild;
+        var spanArr = div.children;
+
+        //    复制第一张图片所在的li,添加到ul的最后面。
+        var ulNewLi = ul.children[0].cloneNode(true);
+        ul.appendChild(ulNewLi);
+        //3.给ol中添加li，ul中的个数-1个，并点亮第一个按钮。
+        for (var i = 0; i < ul.children.length - 1; i++) {
+            var olNewLi = document.createElement("li");
+            olNewLi.innerHTML = i + 1;
+            ol.appendChild(olNewLi)
+        }
+        var olLiArr = ol.children;
+        olLiArr[0].className = "current";
+
+        //4.鼠标放到ol的li上切换图片
+        for (var i = 0; i < olLiArr.length; i++) {
+            //自定义属性，把索引值绑定到元素的index属性上
+            olLiArr[i].index = i;
+            olLiArr[i].onmouseover = function () {
+                //排他思想
+                for (var j = 0; j < olLiArr.length; j++) {
+                    olLiArr[j].className = "";
+                }
+                this.className = "current";
+                //鼠标放到小的方块上的时候索引值和key以及square同步
+//                    key = this.index;
+//                    square = this.index;
+                key = square = this.index;
+                //移动盒子
+                animate(ul, -this.index * imgWidth);
+            }
+        }
+        //5.添加定时器
+        var timer = setInterval(autoPlay, 3000);
+        //固定向右切换图片
+        //两个定时器（一个记录图片，一个记录小方块）
+        var key = 0;
+        var square = 0;
+
+        function autoPlay() {
+            //通过控制key的自增来模拟图片的索引值，然后移动ul
+            key++;
+            if (key > olLiArr.length) {
+                //图片已经滑动到最后一张，接下来，跳转到第一张，然后在滑动到第二张
+                ul.style.left = 0;
+                key = 1;
+            }
+            animate(ul, -key * imgWidth);
+            //通过控制square的自增来模拟小方块的索引值，然后点亮盒子
+            //排他思想做小方块
+            square++;
+            if (square > olLiArr.length - 1) {//索引值不能大于等于5，如果等于5，立刻变为0；
+                square = 0;
+            }
+            for (var i = 0; i < olLiArr.length; i++) {
+                olLiArr[i].className = "";
+            }
+            olLiArr[square].className = "current";
+        }
+
+        //鼠标放上去清除定时器，移开后在开启定时器
+        all.onmouseover = function () {
+            div.style.display = "block";
+            clearInterval(timer);
+        };
+        all.onmouseout = function () {
+            div.style.display = "none";
+            timer = setInterval(autoPlay, 3000);
+        };
+        //6.左右切换图片（鼠标放上去显示，移开隐藏）
+        spanArr[0].onclick = function () {
+            //通过控制key的自增来模拟图片的索引值，然后移动ul
+            key--;
+            if (key < 0) {
+                //先移动到最后一张，然后key的值取之前一张的索引值，然后在向前移动
+                ul.style.left = -imgWidth * (olLiArr.length) + "px";
+                key = olLiArr.length - 1;
+            }
+            animate(ul, -key * imgWidth);
+            //通过控制square的自增来模拟小方块的索引值，然后点亮盒子
+            //排他思想做小方块
+            square--;
+            if (square < 0) {//索引值不能大于等于5，如果等于5，立刻变为0；
+                square = olLiArr.length - 1;
+            }
+            for (var i = 0; i < olLiArr.length; i++) {
+                olLiArr[i].className = "";
+            }
+            olLiArr[square].className = "current";
+        };
+        spanArr[1].onclick = function () {
+            //右侧的和定时器一模一样
+            autoPlay();
+        };
+
+        function animate(ele, target) {
+            clearInterval(ele.timer);
+            var speed = target > ele.offsetLeft ? 10 : -10;
+            ele.timer = setInterval(function () {
+                var val = target - ele.offsetLeft;
+                ele.style.left = ele.offsetLeft + speed + "px";
+                if (Math.abs(val) < Math.abs(speed)) {
+                    ele.style.left = target + "px";
+                    clearInterval(ele.timer);
+                }
+            }, 10)
+        }
+
+    });
+</script>
+</body>
+</html>
